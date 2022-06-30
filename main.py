@@ -16,7 +16,7 @@ def start(message):
     music = telebot.types.KeyboardButton('Музыка')
     photo = telebot.types.KeyboardButton('Фото')
     end = telebot.types.KeyboardButton('Отмена')
-
+    print("Hello world!")
     markup.add(music, photo, end)
     msg = bot.send_message(message.chat.id, f'Привет, {message.from_user.first_name} {message.from_user.last_name}!', reply_markup=markup)
     bot.register_next_step_handler(msg, search)
